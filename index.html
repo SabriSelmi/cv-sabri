@@ -15,18 +15,11 @@
             background-color: cornflowerblue;
         }
         .header{
-            padding: 25px;
-            position: relative;
             color: white;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
         .photo{
-            width : 200px;
-            height: 200px;
             border-radius: 50%;
-            position: absolute;
-            top : 20px;
-            right: 20px;
             border-color: darkblue;
             box-shadow:  0px 18px 31px 6px rgba(0,0,0,0.75);
         }
@@ -52,10 +45,11 @@
             margin-top: 10px;
         }
         .col-sm-2{
-            background: lightgray;        }
-        /* .col-sm-7, .col-sm-3{
-            border : 1px solid black;
-        } */
+            background: lightgray;        
+        }
+        .padd-25{
+            padding : 25px;
+        }
         .mrg-top--15{
             margin-top: -15px;
         }
@@ -65,9 +59,21 @@
         .mrg-top-25{
             margin-top: 25px;
         }
+        .mrg-top-40{
+            margin-top: 40px;
+        } 
         .mrg-right-15{
             margin-right: 15px;
         }
+        .mrg-right-25{
+            margin-right: 25px;
+        }        
+        .mrg-bot-40{
+            margin-bottom : 40px;
+        } 
+        .mrg-bot-15{
+            margin-bottom : 15px;
+        } 
         .black-pearl{
             color: #3A4952;
         }
@@ -92,22 +98,72 @@
             right: 27px;
             top: 2px;
         }
+        .font-55{
+            font-size: 55px;
+        }
+        .competence{
+            background-color: white; 
+            margin-left: -15px; 
+            height: 35px; 
+            position: relative;
+            margin-top: 25px;
+        }
+        .color-white{
+            color : white;
+        }
+        .langue{
+            background-color: white; 
+            margin-left: -15px; 
+            height: 35px; 
+            position: relative; 
+            margin-top: 40px;
+        }
+
+        @media screen and (max-width: 1067px) and (min-width: 912px) {
+            .word-skill{
+                right: 10px;
+                top: 3px;
+                font-size: 20px;
+        }
+        }
+
+        @media screen and (max-width: 911px) and (min-width: 794px){
+            .word-skill{
+                right: 10px;
+                top: 7px;
+                font-size: 15px;
+        }
+        }
+
+        @media screen and (max-width: 793px) and (min-width: 576px){
+            .word-skill{
+                right: 10px;
+                top: 10px;
+                font-size: 12px;
+        }
+        }
+
     </style>
     <script src="https://kit.fontawesome.com/de1e2f3b77.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="bg-theme">
-        <div class="header">
-        <h2>SELMI SABRI</h2>
-        <h4>Développeur MERN STACK && Ingénieur électromécanique</h4>
-        <hr class="hr1"/>
-        <h3>A PROPOS DE MOI</h3>
-        <ul>
-            <li>Efficace, dynamique et organisé</li>
-            <li>Un bon collaborateur</li>
-            <li>Capacités à travailler avec des fortes contraintes de delais et de budgets</li>
-        </ul>
-        <img src="./assets/sabri.jpeg" class="photo" alt="photo"/>
+    <header class="bg-theme container-fluid">
+        <div class="header row padd-25">
+        <div class="col-10">
+            <h2>SELMI SABRI</h2>
+            <h4>Développeur MERN STACK && Ingénieur électromécanique</h4>
+            <hr class="hr1"/>
+            <h3>A PROPOS DE MOI</h3>
+            <ul>
+                <li>Efficace, dynamique et organisé</li>
+                <li>Un bon collaborateur</li>
+                <li>Capacités à travailler avec des fortes contraintes de delais et de budgets</li>
+            </ul>
+        </div>
+        <div class="col-2">
+            <img src="./assets/sabri.jpeg" class="img-fluid photo" alt="photo"/>
+        </div>
+        
     </div>
     </header>
     <hr class="hr2"/>
@@ -115,21 +171,21 @@
     <div class="row">
         <div class="col-sm-9">
         <div class="row mrg-top--15">
-            <div class="col-sm-2" style="text-align: center;">
-                <i class="fas fa-briefcase" style="font-size: 55px;margin-top: 15px;"></i>            
+            <div class="col-sm-2 text-center">
+                <i class="fas fa-briefcase mrg-top-15 font-55 mrg-bot-15"></i>            
             </div>
             <div class="col-sm-10">
-                <h4 style="margin-top: 15px;" class="black-pearl"><b>Expériences :</b></h4> 
+                <h4 class="black-pearl mrg-top-15"><b>Expériences :</b></h4> 
                 <hr class="hr3"/>
             </div>
         </div>
 
         <div class="row mrg-top--15">
-            <div class="col-sm-2" style="text-align: center;">
-                <h6 style="margin-top: 15px;" class="black-pearl" ><b>Mars. 2020 <br/> Ajourd'hui</b></h6>
+            <div class="col-sm-2 text-center">
+                <h6 class="black-pearl mrg-top-15" ><b>Mars. 2020 <br/> Ajourd'hui</b></h6>
             </div>
             <div class="col-sm-10 bolder">
-                <h5 style="margin-top: 15px;"><b>Développeur Full Stack : Vneuron INC</b></h5> 
+                <h5 class="mrg-top-15"><b>Développeur Full Stack : Vneuron INC</b></h5> 
                 <ul class="black-pearl">
                     <li>Produit Principal : ChatBot</li>
                     <ul>
@@ -152,11 +208,11 @@
         </div>
 
         <div class="row mrg-top--15">
-            <div class="col-sm-2" style="text-align: center;">
-                <h6 style="margin-top: 15px;" class="black-pearl" ><b>Mars. 2019<br/>  Fév. 2020</b></h6>
+            <div class="col-sm-2 text-center">
+                <h6 class="black-pearl mrg-top-15" ><b>Mars. 2019<br/>  Fév. 2020</b></h6>
             </div>
             <div class="col-sm-10 bolder">
-                <h5 style="margin-top: 15px;"><b>Développeur MERN Stack : Orga Consulting</b></h5> 
+                <h5 class="mrg-top-15"><b>Développeur MERN Stack : Orga Consulting</b></h5> 
                 <ul class="black-pearl">
                     <li>Développement d’un site web pour regrouper les travailleurs indépendants.</li>
                     <ul>
@@ -176,11 +232,11 @@
         </div>
 
         <div class="row mrg-top--15">
-            <div class="col-sm-2" style="text-align: center;">
-                <h6 style="margin-top: 15px;" class="black-pearl" ><b>Janv. 2019 <br/> Mars. 2019</b></h6>
+            <div class="col-sm-2 text-center">
+                <h6 class="black-pearl mrg-top-15" ><b>Janv. 2019 <br/> Mars. 2019</b></h6>
             </div>
             <div class="col-sm-10 bolder">
-                <h5 style="margin-top: 15px;"><b>Mission Chez: GMG ZI SIDI ABDELHAMID</b></h5> 
+                <h5 class="mrg-top-15"><b>Mission Chez: GMG ZI SIDI ABDELHAMID</b></h5> 
                 <ul class="black-pearl">
                     <li>Développement d’un site web pour l’association (ReactJS, NodeJS)</li>
                 </ul>
@@ -188,32 +244,32 @@
         </div>
 
         <div class="row mrg-top--15">
-            <div class="col-sm-2" style="text-align: center;">
-                <h6 style="margin-top: 15px;" class="black-pearl" ><b>Fév. 2018 <br/> Sep. 2018</b></h6>
+            <div class="col-sm-2 text-center">
+                <h6 class="black-pearl mrg-top-15" ><b>Fév. 2018 <br/> Sep. 2018</b></h6>
             </div>
             <div class="col-sm-10 bolder">
-                <h5 style="margin-top: 15px;"><b>Agent technico-commercial: Société Marbrerie Jelliti</b></h5> 
+                <h5 class="mrg-top-15"><b>Agent technico-commercial: Société Marbrerie Jelliti</b></h5> 
             </div>
         </div>
 
         <!-- Formation -->
 
         <div class="row">
-            <div class="col-sm-2" style="text-align: center;">
-                <i class="fas fa-graduation-cap" style="font-size: 55px;margin-top: 15px;"></i>            
+            <div class="col-sm-2 text-center">
+                <i class="fas fa-graduation-cap mrg-top-15 font-55 mrg-bot-15"></i>            
             </div>
             <div class="col-sm-10">
-                <h4 style="margin-top: 15px;" class="black-pearl"><b>Formation :</b></h4> 
+                <h4 class="black-pearl mrg-top-15"><b>Formation :</b></h4> 
                 <hr class="hr3"/>
             </div>
         </div>
 
         <div class="row mrg-top--15">
-            <div class="col-sm-2" style="text-align: center;">
-                <h6 style="margin-top: 15px;" class="black-pearl" ><b>Oct. 2018<br/> Déc. 2018</b></h6>
+            <div class="col-sm-2 text-center">
+                <h6 class="black-pearl mrg-top-15" ><b>Oct. 2018<br/> Déc. 2018</b></h6>
             </div>
             <div class="col-sm-10">
-                <h5 style="margin-top: 15px;"><b>Centre de formation GoMyCode-Sousse</b></h5> 
+                <h5 class="mrg-top-15"><b>Centre de formation GoMyCode-Sousse</b></h5> 
                 <h6 class="italic"><b>Développeur Full-Stack JS</b></h6> 
                 <p class="black-pearl">
                     Formation en Développement Web- FullStack JS et la maîtrise des technologies HTML, CSS, React JS, Node JS, Express JS, Mongo DB
@@ -222,11 +278,11 @@
         </div>
 
         <div class="row mrg-top--15">
-            <div class="col-sm-2" style="text-align: center;">
-                <h6 style="margin-top: 15px;" class="black-pearl" ><b>Oct. 2018<br/> Déc. 2018</b></h6>
+            <div class="col-sm-2 text-center">
+                <h6 class="black-pearl mrg-top-15" ><b>Oct. 2018<br/> Déc. 2018</b></h6>
             </div>
             <div class="col-sm-10">
-                <h5 style="margin-top: 15px;"><b>École Nationale d'Ingénieurs de Gafsa</b></h5> 
+                <h5 class="mrg-top-15"><b>École Nationale d'Ingénieurs de Gafsa</b></h5> 
                 <h6 class="italic"><b>Ingénieur électromécanique</b></h6> 
                 <p class="black-pearl">
                     Diplôme national de l'ingénieur électromécanique
@@ -235,11 +291,11 @@
         </div>
 
         <div class="row mrg-top--15">
-            <div class="col-sm-2" style="text-align: center;">
-                <h6 style="margin-top: 15px;" class="black-pearl" ><b>Sep. 2011 <br/>Juin 2014</b></h6>
+            <div class="col-sm-2 text-center">
+                <h6 class="black-pearl mrg-top-15" ><b>Sep. 2011 <br/>Juin 2014</b></h6>
             </div>
             <div class="col-sm-10">
-                <h5 style="margin-top: 15px;"><b>Institut Préparatoire aux études d’ingénieurs Kairouan</b></h5> 
+                <h5 class="mrg-top-15"><b>Institut Préparatoire aux études d’ingénieurs Kairouan</b></h5> 
                 <h6 class="italic"><b>Mathématique- Physiques</b></h6> 
                 <p class="black-pearl">
                     Diplôme des études préparatoires Mathématiques- Physiques
@@ -248,11 +304,11 @@
         </div>
 
         <div class="row mrg-top--15">
-            <div class="col-sm-2" style="text-align: center;">
-                <h6 style="margin-top: 15px;" class="black-pearl" ><b>Sep. 2010 <br/>Juin 2011</b></h6>
+            <div class="col-sm-2 text-center">
+                <h6 class="black-pearl mrg-top-15" ><b>Sep. 2010 <br/>Juin 2011</b></h6>
             </div>
             <div class="col-sm-10">
-                <h5 style="margin-top: 15px;"><b>Lycée secondaire Kairouan</b></h5> 
+                <h5 class="mrg-top-15"><b>Lycée secondaire Kairouan</b></h5> 
                 <h6 class="italic"><b>Baccalauréat section mathématique</b></h6> 
                 <p class="black-pearl">
                     Diplôme national en baccalauréat section mathématique.<br/>
@@ -264,18 +320,18 @@
         <!-- Certificats -->
 
         <div class="row">
-            <div class="col-sm-2" style="text-align: center;">
-                <i class="fas fa-award" style="font-size: 55px;margin-top: 15px;"></i>            
+            <div class="col-sm-2 text-center">
+                <i class="fas fa-award mrg-top-15 font-55 mrg-bot-15"></i>            
             </div>
             <div class="col-sm-10">
-                <h4 style="margin-top: 15px;" class="black-pearl"><b>Certificats :</b></h4> 
+                <h4 class="black-pearl mrg-top-15"><b>Certificats :</b></h4> 
                 <hr class="hr3"/>
             </div>
         </div>
 
 
         <div class="row mrg-top--15">
-            <div class="col-sm-2" style="text-align: center;">
+            <div class="col-sm-2 text-center">
             </div>
             <div class="col-sm-10">
                 <p class="black-pearl mrg-top-15">
@@ -287,17 +343,17 @@
         <!-- Projets Réalisés: -->
 
         <div class="row">
-            <div class="col-sm-2" style="text-align: center;">
-                <i class="fab fa-product-hunt" style="font-size: 55px;margin-top: 15px;"></i>            
+            <div class="col-sm-2 text-center">
+                <i class="fab fa-product-hunt mrg-top-15 font-55 mrg-bot-15"></i>            
             </div>
             <div class="col-sm-10">
-                <h4 style="margin-top: 15px;" class="black-pearl"><b>Projets Réalisés :</b></h4> 
+                <h4 class="black-pearl mrg-top-15"><b>Projets Réalisés :</b></h4> 
                 <hr class="hr3"/>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-sm-2" style="text-align: center;">
+            <div class="col-sm-2 text-center">
             </div>
             <div class="col-sm-10">
                 <ul>
@@ -310,18 +366,18 @@
         <!-- Vie associative -->
 
         <div class="row">
-            <div class="col-sm-2" style="text-align: center;">
-                <i class="fas fa-hands-helping" style="font-size: 55px;margin-top: 15px;"></i>            
+            <div class="col-sm-2 text-center">
+                <i class="fas fa-hands-helping mrg-top-15 font-55 mrg-bot-15"></i>            
             </div>
             <div class="col-sm-10">
-                <h4 style="margin-top: 15px;" class="black-pearl"><b>Vie associative :</b></h4> 
+                <h4 class="black-pearl mrg-top-15"><b>Vie associative :</b></h4> 
                 <hr class="hr3"/>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-sm-2" style="text-align: center;">
-                <h6 style="margin-top: 15px;" class="black-pearl" ><b>Depuis 2018</b></h6>
+            <div class="col-sm-2 text-center">
+                <h6 class="black-pearl mrg-top-15" ><b>Depuis 2018</b></h6>
             </div>
             <div class="col-sm-10">
                 <p class="black-pearl mrg-top-15"><b class="black-pearl">Membre à l’association de charité OFOK</b> </p>
@@ -329,8 +385,8 @@
         </div>
 
         <div class="row">
-            <div class="col-sm-2" style="text-align: center;">
-                <h6 style="margin-top: 15px;" class="black-pearl" ><b>2015 - 2017</b></h6>
+            <div class="col-sm-2 text-center">
+                <h6 class="black-pearl mrg-top-15" ><b>2015 - 2017</b></h6>
             </div>
             <div class="col-sm-10">
                 <p class="black-pearl mrg-top-15"><b class="black-pearl">Trésorier du Club Robotique ENIGA</b> </p>
@@ -342,11 +398,11 @@
 
 
     <div class="col-sm-3 bg-theme mrg-top--15">
-        <h4 style="background-color: white; margin-left: -15px; height: 35px; position: relative;" class="mrg-top-25">
-            <span class="circle-skill"><i class="fas fa-toolbox" ></i></span> 
+        <h4 class="competence">
+            <span class="circle-skill"><i class="fas fa-toolbox"></i></span> 
             <span class="word-skill">Compétences</span>
         </h4>
-        <div style="color: white;">
+        <div class="color-white">
             <h4 class="text-center mrg-top-15">Web : </h4>
             <div class="mrg-top-15">
                 <h6>HTML5</h6>
@@ -460,11 +516,11 @@
 
         </div>
 
-        <h4 style="background-color: white; margin-left: -15px; height: 35px; position: relative; margin-top: 40px;">
+        <h4 class="langue">
             <span class="circle-skill"><i class="fas fa-language"></i></span> 
-            <span class="word-skill" style="margin-right: 25px;">Langues</span>
+            <span class="word-skill mrg-right-25">Langues</span>
         </h4>
-            <div style="margin-top: 40px; margin-bottom: 40px; color: white;">
+            <div class="mrg-top-40 mrg-bot-40 color-white">
                 <div class="mrg-top-15">
                     <h6>Arabe</h6>
                     <div class="progress mrg-right-15">
@@ -495,38 +551,41 @@
 
             </div>   
             <div style="position: relative;">
-                <div class="text-center" style="width: 60%; position: absolute; z-index: 3;margin-left: auto; margin-right: auto; left: 0;right: 0;">
+                <div class="text-center" style="width: 60%; position: absolute; z-index: 3;margin-left: auto; margin-right: auto; left: 0;right: 0; top : -15px">
                     <h4 style="background-color: white; border: 1.5px solid darkblue; padding: 5px 10px;">
                         Contact
                     </h4>
                 </div>
                 
-                <div style="position: absolute; top : 20px; height: 340px; background-color:#007bff; color: white;z-index: 1;" class="row">
-                    <p class="col-12" style="margin-top: 40px;">
+                <div class="row" style="background-color:#007bff; color: white;">
+                    <div class="col-12">
+                    <p style="margin-top: 40px;">
                         <b><i class="fas fa-mobile-alt"></i> +216 20 592 347</b>
                     </p>
-                    <p class="col-12">
+                    <p>
                         <b><i class="far fa-envelope"></i> sabri.selmi1992@gmail.com</b>
                     </p>
 
-                    <p class="col-12">
+                    <p>
                         <b><a href="https://github.com/SabriSelmi" style="color: white;" target="_blank"><i class="fab fa-github"></i> https://github.com/SabriSelmi</a></b>
                     </p>
-                    <p class="col-12">
+                    <p>
                         <b><a href="https://www.linkedin.com/in/ sabri-selmi-389774137/" style="color: white;" target="_blank"><i class="fab fa-linkedin"></i> https://www.linkedin.com/in/ sabri-selmi-389774137/</a></b>
                     </p>
-                    <p class="col-12" style="margin-bottom: 40px;">
+                    <p style="margin-bottom: 40px;">
                         <b><i class="far fa-address-card"></i> Adresse: EL GHAZELA, ARIANA</b>
                     </p>
+                </div> 
                 </div>
-                <div style="position: absolute; top:290px">
-                <div class="text-center"style="z-index: 3;position: absolute;margin-left: auto; margin-right: auto; left: 0;right: 0; width: 60%; margin-top:50px">
+            </div> 
+                <div style="position: relative;">
+                <div class="text-center"style="z-index: 3;position: absolute;margin-left: auto; margin-right: auto; left: 0;right: 0; width: 60%; top:-15px">
                     <h4 style="background-color: white; border: 1.5px solid darkblue; padding: 5px 10px;">
                         Intérêts
                     </h4>
                 </div>
     
-                <ul class="row" style="margin-top: 50px;">
+                <ul class="row">
                     <li class="col-12" style="color: white;margin-top: 50px;">
                         <b>Jouer aux échecs</b>
                     </li>
@@ -535,7 +594,7 @@
                     </li>
                 </ul>
             </div>
-            </div> 
+
             
 
             
